@@ -30,6 +30,12 @@ def get_unique_industries(path: str) -> List[str]:
 
 
 def filter_by_industry(jobs: List[Dict], industry: str) -> List[Dict]:
+    group_by_industry = []
+    for row in jobs:
+        industry_row = row["industry"]
+        if industry_row == industry:
+            group_by_industry.append(row)
+    return group_by_industry
     """Filters a list of jobs by industry
 
     Parameters
