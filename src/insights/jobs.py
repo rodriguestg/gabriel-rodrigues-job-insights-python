@@ -8,11 +8,7 @@ def read(path: str) -> List[Dict]:
     with open(path, mode="r", encoding="utf-8") as file:
         jobs_csv = csv.DictReader(file, delimiter=",", quotechar='"')
         dict_jobs = [jobs for jobs in jobs_csv]
-        # print(jobs_cs)
     return dict_jobs
-
-        # jobs = csv.reader(file, delimiter=',')
-        # print(jobs)
     """Reads a file from a given path and returns its contents
 
     Parameters
