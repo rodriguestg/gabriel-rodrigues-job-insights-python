@@ -25,6 +25,14 @@ def read(path: str) -> List[Dict]:
 
 
 def get_unique_job_types(path: str) -> List[str]:
+    dict_jobs = read(path)
+    group_by_job_type = {}
+    for row in dict_jobs:
+        job_type = row["job_type"]
+        if job_type not in group_by_job_type:
+            group_by_job_type[job_type] = 0
+        group_by_job_type[job_type] += 1
+    return group_by_job_type
     """Checks all different job types and returns a list of them
 
     Must call `read`
