@@ -8,9 +8,9 @@ def get_unique_industries(path: str) -> List[str]:
         dict_industries = [industries for industries in industries_csv]
     group_by_industries = []
     for row in dict_industries:
-        industries_row = row["industries"]
-        if industries_row not in group_by_industries:
-            group_by_industries.append(row)
+        industries_row = row["industry"]
+        if industries_row not in group_by_industries and industries_row != '':
+            group_by_industries.append(industries_row)
     return group_by_industries
     """Checks all different industries and returns a list of them
 
