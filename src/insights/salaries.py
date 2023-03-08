@@ -74,7 +74,6 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
             result = False
     except (ValueError, TypeError, KeyError):
         raise ValueError("O valor digitado não é válido.")
-            
     return result
     """Checks if a given salary is in the salary range of a given job
 
