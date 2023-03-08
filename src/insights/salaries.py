@@ -108,7 +108,6 @@ def filter_by_salary_range(
     for row in jobs:
         max_s = int(row["max_salary"])
         min_s = int(row["min_salary"])
-        print(type(salary))
         if isinstance(salary, (str, int)):
             if max_s > min_s and len(str(salary)) > 0:
                 job = matches_salary_range(row, salary)
